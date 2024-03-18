@@ -5,6 +5,10 @@ defineProps({
     required: true
   }
 })
+
+function checkConsole() {
+  console.log('button clicked')
+}
 </script>
 
 <template>
@@ -15,9 +19,11 @@ defineProps({
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
-    
+
     <div class="center">
-      <cv-button aria-label="button story" default="Field size" size="field">Button</cv-button>
+      <cv-button @click="checkConsole" aria-label="button story" default="Field size" size="field"
+        >Button</cv-button
+      >
     </div>
   </div>
 </template>
@@ -26,10 +32,10 @@ defineProps({
 export default {
   methods: {
     handleClick() {
-      console.log('Button clicked!');
+      console.log('Button clicked!')
     }
   }
-};
+}
 </script>
 
 <style scoped>
