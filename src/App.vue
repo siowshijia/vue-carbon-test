@@ -10,15 +10,32 @@ import TheWelcome from './components/TheWelcome.vue'
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
+
+    <tutorial-header />
   </header>
 
   <main>
     <TheWelcome />
+
+    <cv-content id="#main-content">
+      <router-view />
+    </cv-content>
   </main>
 </template>
 
+<script>
+import TutorialHeader from './components/TutorialHeader/TutorialHeader.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TutorialHeader
+  }
+}
+</script>
+
 <style lang="scss">
-@import "./styles/_carbon.scss";
+@import './styles/_carbon.scss';
 </style>
 
 <style scoped>
